@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="修改字体" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="最近在做一个神奇的 App 需要添加楷体，检查了一下发现 iOS 默认并不会安装这种字体，需要我们自己将字体文件添加到 App 中，本文主要记录了添加自定义字体的过程、添加完成后的效果以及遇到的一些坑，文中 iOS 代码主要为 Swift 3。" translatesAutoresizingMaskIntoConstraints="NO" id="OTw-4k-63B">
+                                <rect key="frame" x="20" y="28" width="374" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8S-qL-mol">
+                                <rect key="frame" x="145" y="641" width="124" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="YP2-FO-uBl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="快点我"/>
+                                <connections>
+                                    <action selector="changeFont:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PGg-DA-Ta9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OTw-4k-63B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3YR-Le-bCO"/>
+                            <constraint firstItem="I8S-qL-mol" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7fg-bH-rUi"/>
+                            <constraint firstItem="OTw-4k-63B" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KGD-mY-4hL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OTw-4k-63B" secondAttribute="bottom" constant="204" id="LqO-RZ-Nkh"/>
+                            <constraint firstItem="I8S-qL-mol" firstAttribute="top" secondItem="OTw-4k-63B" secondAttribute="bottom" constant="109" id="gbZ-Z1-4bR"/>
+                            <constraint firstItem="OTw-4k-63B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="rfk-VF-9XG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="OTw-4k-63B" id="Atq-Pe-CZn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
